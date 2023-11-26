@@ -1,3 +1,6 @@
+// Component Import
+import { Checkbox } from '../Checkbox'
+
 // Image Import
 import clipboard from '../../assets/clipboard.png'
 
@@ -8,7 +11,7 @@ export function TaskArea() {
   return (
     <TaskAreaStyled>
       <div className="with-task">
-        <input type="checkbox" />
+        <Checkbox />
         <p className='done'>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
         <button>
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">

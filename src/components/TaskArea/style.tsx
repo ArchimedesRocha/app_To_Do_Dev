@@ -24,13 +24,6 @@ margin-bottom: 2.4rem;
   background: var(--gray-500, #262626);
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
 
-  input type[checkbox] {
-    width: 2.4rem;
-    height: 2.4rem;
-    padding: 0.3273rem;
-    background: transparent;
-  }
-
   p {
     width: 63.2rem;
     color: var(--gray-100, #F2F2F2);
