@@ -3,8 +3,7 @@ import GlobalStyle from './globalStyle';
 
 // Components Imports
 import { Header } from './components/Header';
-import { Dashboard } from './components/Dashboard';
-import { Progress } from './components/Progress';
+import { Content } from './components/Content';
 
 function App() {
 
@@ -12,8 +11,7 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Dashboard />
-      <Progress />
+      <Content />
     </>
   )
 }

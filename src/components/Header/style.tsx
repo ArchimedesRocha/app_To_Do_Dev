@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const HeaderStyled = styled.header`
+
   width: 100vw;
   height: 20rem;
   display: flex;
@@ -23,5 +24,7 @@ const HeaderStyled = styled.header`
         color: var(--purple-dark);
       }
   }
+
 `
-export default HeaderStyled
+
+export default HeaderStyled;

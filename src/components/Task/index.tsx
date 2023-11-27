@@ -1,18 +1,25 @@
+// React Imports
+import { useState } from 'react'
+
 // Component Import
 import { Checkbox } from '../Checkbox'
 
-// Image Import
-import clipboard from '../../assets/clipboard.png'
+// Styled Imports
+import TaskStyled from './style';
 
-// Styled Import
-import TaskAreaStyled from './style'
+export function Task() {
 
-export function TaskArea() {
+  const [childrenValue, setChildrenValue] = useState(false);
+
+  function onChangeValue(value: boolean) {
+    setChildrenValue(value)
+  }
+
   return (
-    <TaskAreaStyled>
+    <TaskStyled>
       <div className="with-task">
-        <Checkbox />
-        <p className='done'>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+        <Checkbox wasChecked={onChangeValue} />
+        <p className={childrenValue === true ? 'done' : ''}>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
         <button>
           <svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14" fill="none">
             <path d="M8.20214 4.98547H6.87158V10.5073H8.20214V4.98547Z" />
@@ -21,13 +28,6 @@ export function TaskArea() {
           </svg>
         </button>
       </div>
-      <div className="without-task">
-        <img src={clipboard} alt="Icone de documento" />
-        <div className="messages">
-          <p>Você ainda não tem tarefas cadastradas</p>
-          <p>Crie tarefas e organize seus itens a fazer</p>
-        </div>
-      </div>
-    </TaskAreaStyled>
+    </TaskStyled>
   )
 }

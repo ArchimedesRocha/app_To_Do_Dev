@@ -1,4 +1,5 @@
-import HeaderStyled from './style';
+// Styled Imports
+import HeaderStyled from "./style";
 
 export function Header() {
   return (

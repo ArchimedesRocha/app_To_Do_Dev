@@ -8,19 +8,26 @@ import CheckboxStyled from './style'
 import { SvgChecked } from "../Svg/Checked"
 import { SvgUnchecked } from "../Svg/Unchecked"
 
-export function Checkbox() {
+interface Props {
+  wasChecked: (value: boolean) => void;
+}
+
+export function Checkbox({ wasChecked }: Props) {
 
   const [isChecked, setIsChecked] = useState(false)
 
   function handleChecked(value: React.ChangeEvent<HTMLInputElement>) {
-    setIsChecked(value.target.checked)
+    setIsChecked(value.target.checked);
+    wasChecked(value.target.checked);
   }
 
   function handleClicked() {
     setIsChecked(!isChecked)
+    wasChecked(!isChecked)
   }
 
   return (
+
     <CheckboxStyled
       htmlFor=""
       onClick={handleClicked}
